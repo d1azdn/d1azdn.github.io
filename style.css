@@ -1,0 +1,385 @@
+:root{
+    --black-color : #000000;
+    --white-color : #ffffff;
+    --gray-color : #cfcfcf;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    font-family: "Public-sans", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0px 9rem;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 62px;
+    right: 0%;
+    padding : 0px 1%;
+    top: 0%;
+    z-index: 101;
+    background-color: white;
+    box-shadow: none;
+    transition: all 400ms ease;
+}
+
+nav.scrolled{
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    padding : 0px 10%;
+    position: fixed;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    gap : 40px
+}
+
+nav ul li a {
+    font-family: "Public Sans", sans-serif;
+    font-size: 17.075px;
+    font-style: normal;
+    color: black;
+    text-decoration: underline 0.1em rgba(0, 0, 0, 0);
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 400ms, text-underline-offset 400ms;
+}
+
+nav ul li a:hover{
+    text-decoration-color: rgba(0, 0, 0, 1);
+    text-underline-offset: 0.4em;
+}
+
+/* Topbar */
+.topbar{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7% 5%;
+}
+
+.topbar .scrolled{
+    padding:13% 5% 7% 5%;
+}
+
+.topbar .left h1{
+    color: #000;
+    font-family: "Public Sans", sans-serif;
+    font-size: 45.533px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.topbar .left p{
+    color: #000;
+    font-family: "Public Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*Profil - Profil*/
+.my-profile{
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.my-profile h2{
+    color: #000;
+    font-family: "Public Sans", sans-serif;
+    font-size: 34.15px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.my-profile p{
+    color: #000;
+    font-family: "Public Sans";
+    font-size: 15.178px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.my-profile .cards{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 5% auto;
+    border-radius: 17px;
+    width: 55%;
+    padding: 1%;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.my-profile .cards .background{
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.my-profile .cards .image{
+    opacity: 1;
+}
+
+.my-profile .cards .content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap : 20px;
+}
+
+.my-profile .cards h3{
+    color: #000;
+    font-family: "Public Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.my-profile .cards h4{
+    color: #000;
+    font-family: "Public Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/*Profil - Education*/
+.my-education{
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.my-education h2{
+    color: #000;
+    font-family: "Public Sans", sans-serif;
+    font-size: 34.15px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.my-education .content{
+    display: flex;
+    justify-content: center;
+    margin: 3% auto;
+    gap: 40px;
+}
+
+.my-education .content .card{
+    width: 14rem;
+}
+
+.my-education .content .card img{
+    transition: all 300ms ease;
+}
+
+.my-education .content .card img:hover{
+    filter: brightness(40%);
+    cursor: pointer;
+}
+
+/*Project*/
+.my-project{
+    align-items: center;
+    text-align: center;
+    margin: 5% auto;
+}
+
+.my-project h2{
+    color: #000;
+    font-family: "Public Sans", sans-serif;
+    font-size: 34.15px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.my-project .content{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 10%;
+    gap:40px;
+}
+
+.my-project .content .card{
+    text-align: left;
+}
+
+.my-project .content .card .card-text{
+    margin: 5%;
+}
+
+.my-project .button {
+    color: black;
+    background-color: var(--gray-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 90px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5% 3%;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+.my-project .button{
+    width: 40%;
+}
+
+.my-project .button:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.my-project .button h4{
+    font-family: "Public Sans", sans-serif;
+    font-size: 20.869px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+/*Footer*/
+footer{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 15%;
+}
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 1024px) {
+    body{
+        margin: 0;
+        padding: 0px 6rem;
+    }
+    .my-profile .cards{
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        margin: 5% auto;
+        border-radius: 17px;
+        width: 80%;
+        padding: 1% 0.5%;
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    }
+    .my-education .content{
+        display: flex;
+        justify-content: center;
+        margin: 3% auto;
+        gap: 20px;
+    }
+    
+    .my-education .content .card{
+        width: 12rem;
+    }
+    .my-project .content{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 4%;
+        gap:40px
+    }
+    .my-project .button h4{
+        font-family: "Public Sans", sans-serif;
+        font-size: 15.869px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        margin: 0;
+        padding: 0px 4rem;
+    }
+    
+    .my-education .content .card{
+        width: 8rem;
+    }
+}
+
+@media only screen and (max-width:627px) {
+    body{
+        margin: 0;
+        padding: 0px 2rem;
+    }
+    .topbar .right {
+        display: none;
+    }
+    .topbar .left{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .topbar{
+        display: grid;
+    }
+    .my-profile .cards{
+        display: block;
+        overflow: hidden;
+        position: relative;
+        margin: 5% auto;
+        border-radius: 17px;
+        width: 73.5%;
+        padding: 1%;
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    }
+    .my-profile .cards .content{
+        position: relative;
+        display: block;
+        align-items: center;
+        margin: 0 auto;
+        gap : 20px;
+    }
+    .my-profile .cards .background{
+        display: none;
+    }
+    .my-education .content .card{
+        width: 15rem;
+    }
+    .my-education .content{
+        display: grid;
+        text-align: left;
+    }
+    .my-project .content{
+        display: grid;
+        text-align: left;
+        gap:10px;
+    }
+    .my-project .button{
+        width: 80%;
+    }
+    .my-project .card{
+        width: 80%;
+        margin: 0 auto;
+    }
+    nav ul li{
+        display: none;
+    }
+    .topbar{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12% 0%;
+    }
+}
