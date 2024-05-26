@@ -48,23 +48,19 @@ export default defineComponent({
         <img src="../assets/d1az.png" class="absolute z-10" style="width: 30rem; filter: contrast(110%);" alt="">
         <div class="scroll">
             <div class="rightToleft flex flex-row gap-14" id="stroke-on">
-                <h1 class="hero" style="font-size: 9rem;" @mouseover="stroke()">FRONTEND</h1>
-                <h1 class="hero" style="font-size: 9rem;" @mouseover="stroke()">FRONTEND</h1>
-                <h1 class="hero" style="font-size: 9rem;" @mouseover="stroke()">FRONTEND</h1>
+                <h1 class="hero" style="font-size: 9rem;" @mouseover="stroke()">FRONTEND FRONTEND FRONTEND FRONTEND FRONTEND FRONTEND FRONTEND FRONTEND FRONTEND FRONTEND</h1>
             </div>
             <div class="leftToright flex flex-row gap-14" id="stroke-off">
-                <h1 class="hero" style="font-size: 9rem;" @mouseover="stroke()">DEVELOPER</h1>
-                <h1 class="hero" style="font-size: 9rem;" @mouseover="stroke()">DEVELOPER</h1>
-                <h1 class="hero" style="font-size: 9rem;" @mouseover="stroke()">DEVELOPER</h1>
+                <h1 class="hero" style="font-size: 9rem;" @mouseover="stroke()">DEVELOPER DEVELOPER DEVELOPER DEVELOPER DEVELOPER DEVELOPER DEVELOPER</h1>
             </div>
         </div>
-        <h1 class="absolute z-20 text-zinc-900 bg-zinc-50 rounded-lg border shadow-md px-20 py-4 text-2xl font-semibold" style="margin-top: 30rem; ">"Craft your design, let <b class="font-semibold bg-yellow-300">every line</b> pulse with life."</h1>
+        <h1 class="absolute z-20 text-zinc-900 bg-zinc-50 rounded-lg border shadow-md px-2 sm:px-20 py-4 text-lg sm:text-2xl text-center font-semibold" style="margin-top: 30rem; ">"Craft your design, let <b class="font-semibold bg-yellow-300">every line</b> pulse with life."</h1>
     </div>
 
-    <div class="projects mx-32 mt-20" id="projects">
+    <div class="projects mx-14 lg:mx-32 mt-20" id="projects">
         <h4 class="text-zinc-700 font-semibold text-xl">This is</h4>
         <h1 class="text-zinc-900 font-semibold text-4xl">My projects</h1>
-        <div class="container grid-cols-3 grid gap-10 mt-10">
+        <div class="container grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid gap-10 mt-10">
             
             <div class="card rounded-md border shadow-md p-6 hover:cursor-pointer hover:shadow-lg " v-for="project in projects" @mouseenter="showImage()" @mouseleave="showImage()">
                 <div class="images">
@@ -82,19 +78,19 @@ export default defineComponent({
     </div>
 
     <div class="scroll items-center justify-center my-20 border-2 py-4">
-        <div class="leftToright gap-14 flex" style="width: 2500px;" id="stroke-on">
-            <h1 class="hero" style="font-size: 5rem;" @mouseover="stroke()"><a href="https://github.com/d1azdn" target="_blank">SEE ON MY GITHUB - SEE ON MY GITHUB</a></h1>
+        <div class="rightToleft gap-14 flex" id="stroke-on">
+            <h1 class="hero" style="font-size: 5rem;" @mouseover="stroke()"><a href="https://github.com/d1azdn" target="_blank">SEE ON MY GITHUB - SEE ON MY GITHUB - SEE ON MY GITHUB - SEE ON MY GITHUB - SEE ON MY GITHUB - SEE ON MY GITHUB</a></h1>
         </div>
     </div>
 
-    <div class="about mx-32 mt-16" id="about">
+    <div class="about mx-14 lg:mx-32 mt-16" id="about">
         <h4 class="text-zinc-700 font-semibold text-xl">Here we are.</h4>
         <h1 class="text-zinc-900 font-semibold text-4xl">About me</h1>
-        <div class="content flex mt-12">
-            <div class="images w-1/3">
+        <div class="content flex flex-col lg:flex-row mt-12 gap-10">
+            <div class="images w-2/3 lg:w-1/3">
                 <img src="../assets/d1azdn.jpg" class="w-72 h-80 object-cover rounded-xl border shadow-lg" alt="">
             </div>
-            <div class="content w-2/3 justify-center content-center">
+            <div class="content w-full lg:w-2/3 justify-center content-center">
                 <div class="aboutme text-md text-xl">
                     <p>Diaz <i class="text-sm">(d1azdn),</i> a frontend developer driven by his passion for technology, particularly excels in the art of website design. Leveraging <b class="text-xl bg-yellow-300">Vue, Vite and React,</b> he skillfully crafts projects while continually embracing the evolving landscape of web development through his insatiable <b>thirst for knowledge.</b></p>
                 </div>
@@ -116,7 +112,7 @@ export default defineComponent({
         <h4 class="text-zinc-700 font-semibold text-xl">Catch me up.</h4>
         <h1 class="text-zinc-900 font-semibold text-4xl">Lets work together.</h1>
 
-        <div class="socials grid grid-cols-4 mt-14">
+        <div class="socials grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-14 gap-10">
             <div class="githubs flex flex-col justify-center items-center">
                 <a href="https://github.com/d1azdn" target="_blank">
                     <div class="github w-20 hover:cursor-pointer">
@@ -173,28 +169,29 @@ html {
     @apply px-4 py-1 font-semibold text-white bg-zinc-900 rounded-md
 }
 .hero{
-    @apply text-center font-extrabold transition-all duration-300;
+    @apply font-extrabold transition-all duration-300;
     line-height: 1;
     letter-spacing: 0.2em;
     -webkit-text-stroke: 3px;
     -webkit-text-stroke-color: rgb(24 24 27);
 }
+
 #stroke-on{
-    @apply text-zinc-900 hover:cursor-pointer hover:text-white
+    @apply text-zinc-900 hover:cursor-pointer hover:text-white overflow-hidden whitespace-nowrap inline-block
 }
 #stroke-off{
-    @apply text-white hover:cursor-pointer hover:text-zinc-900 
+    @apply text-white hover:cursor-pointer hover:text-zinc-900 overflow-hidden whitespace-nowrap inline-block
 }
 
 .leftToright{
-    animation: leftToright 11s infinite linear;
+    animation: leftToright 25s infinite linear;
 }
 
 .rightToleft{
-    animation: rightToleft 11s infinite linear;
+    animation: rightToleft 25s infinite linear;
 }   
 
-@keyframes leftToright{
+@keyframes rightToleft{
     from {
         transform: translateX(0%);
     }
@@ -203,7 +200,7 @@ html {
     }
 }
 
-@keyframes rightToleft{
+@keyframes leftToright{
     from {
         transform: translateX(0%);
     }
